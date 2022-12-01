@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: wscuellarkubernetesnetcore 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wscuellarkubernetesnetcore
+  template:
+    metadata:
+      labels:
+        app: wscuellarkubernetesnetcore 
+    spec:
+      containers:
+        - name: wscuellarkubernetesnetcore 
+          image: kubernatesaks.azurecr.io/wscuellarkubernetesnetcore
+          ports:
+          - containerPort: 80
